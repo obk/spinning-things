@@ -2,6 +2,7 @@
 //
 //	go run . cube   (default)
 //	go run . donut
+//	go run . lemniscate
 //
 // Press Ctrl+C to quit.
 package main
@@ -32,8 +33,10 @@ func main() {
 		case "cube":
 		case "donut":
 			s = &donut{}
+		case "lemniscate":
+			s = &lemniscate{}
 		default:
-			fmt.Fprintf(os.Stderr, "unknown shape %q (want cube or donut)\n", os.Args[1])
+			fmt.Fprintf(os.Stderr, "unknown shape %q (want cube, donut or lemniscate)\n", os.Args[1])
 			os.Exit(2)
 		}
 	}
